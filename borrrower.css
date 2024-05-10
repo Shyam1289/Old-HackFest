@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.menu-icon {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin-right: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.closeDashboard{
+    display: flex;
+    align-items: flex-end;
+
+}
+.container {
+    padding: 20px;
+}
+.dashboard-panel {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #c5a400;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+.dashboard-panel.open {
+    left: 0;
+}
+.dashboard-content {
+    padding: 20px;
+    color: white;
+}
+.logout {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.profile {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+.profile h2 {
+    margin-top: 0;
+    text-align: center;
+}
+.image {
+    margin-bottom: 20px;
+}
+.profile-info {
+    margin-bottom: 20px;
+}
+.profile-info p {
+    margin: 20px 0;
+}
+.button-container {
+    text-align: center;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="lenderProfile.css">
+    <link rel="stylesheet" href="lender.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="toggleDashboard()">Dashboard</a></li>
+                <li><a href="#" onclick="showHomePage()">Home</a></li>
+                <li><a href="#" onclick="contact()">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="dashboard-panel" id="dashboard">
+        <div class="dashboard-content">
+            <div class="closeDashboard" onclick="closeDashboard()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="white" fill="none">
+                <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+            <h1>Dashboard</h1>
+            <nav>
+                    <p><a href="#" onclick="Edit()">Edit Profile</a></p>
+                    <p><a href="#" onclick="LendersList()">Lenders List</a></p>
+                    <p><a href="#" onclick="Application()">Application Status</a></p>
+            </nav>
+        </div>
+        <div class="logout" onclick="logout()">Logout</div>
+    </div>
+    <div class="form">
+        <h2>Profile</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" placeholder="Enter your address">
+        </div>
+        <div class="form-group">
+            <label for="business">Business:</label>
+            <input type="text" id="business" placeholder="Enter your business">
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" placeholder="Enter your contact">
+        </div>
+        <button onclick="submitForm()"><a href="lender.html">Submit</a></button>
+    </div>
+
+    <script src="lenderProfie.js">
+    </script>
+    <script src="lender.js"></script>
+</body>
+</html>
