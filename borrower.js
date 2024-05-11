@@ -36,12 +36,9 @@ function contact() {
 function Edit() {
     // Perform logout actions, e.g., redirect to logout page
     window.location.href = 'profile.html';
-
 }
 function LendersList() {
-    // Perform logout actions, e.g., redirect to logout page
-    
-
+    window.location.href = 'list_lender.php';
 }
 function Application() {
     // Perform logout actions, e.g., redirect to logout page
@@ -54,9 +51,17 @@ function LoanCriteria() {
 }
 function changeToLender() {
     // Perform logout actions, e.g., redirect to logout page
-    window.location.href = 'lender.html';
+    window.location.href = 'lender.php';
 }
 function changeToBorrower() {
     // Perform logout actions, e.g., redirect to logout page
     window.location.href = 'borrower.php';
+}
+function Review() {
+    window.location.href = 'userReview.html';
+
+}
+function FAQ() {
+    window.location.href = 'faq.html';
+
 }

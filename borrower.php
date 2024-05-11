@@ -25,31 +25,29 @@
 
       <div class="userType" id="userType">
         <nav>
-          <a href="#" onclick="changeToLender() ">Change to Lender</a>
+        <a href="lender.php">Change to Lender</a>
         </nav>
       </div>
       <div class="profile">
         <center>
           <img class="image" src="images/userprofile.png" width="120" height="150">
         </center>
-        
-          
-          <p><strong>Name:</strong> <span id="name"></span></p>
-          <p><strong>Email ID:</strong> <span id="email"></span></p>
+        <p><strong>Name:  <?php include 'fetch_name.php'; ?></strong> <span id="name"></span></p>
+          <p><strong>Email ID: <?php include 'fetch_email.php'; ?></strong> <span id="email"></span></p>
           <p>
-            <strong>Address:</strong>
+            <strong>Address: <?php include 'fetch_address.php'; ?></strong>
             <span id="address"></span>
           </p>
           <p>
-            <strong>Business:</strong>
+            <strong>Business: <?php include 'fetch_business.php'; ?></strong>
             <span id="business"></span>
           </p>
           <p>
-            <strong>Annual Income:</strong> <span id="income"></span>
+            <strong>Annual Income: <?php include 'fetch_income.php'; ?></strong> <span id="income"></span>
           </p>
-          <p><strong>Name of Collateral:</strong> <span id="collateralName"></span></p>
-          <p><strong>Market Value of Collateral:</strong> <span id="collateralValue"></span></p>
-          <p><strong>Contact:</strong> <span id="contact"></span></p>
+          <p><strong>Name of Collateral: <?php include 'fetch_collateral.php'; ?></strong> <span id="collateralName"></span></p>
+          <p><strong>Market Value of Collateral: <?php include 'fetch_collateralVal.php'; ?></strong> <span id="collateralValue"></span></p>
+          <p><strong>Contact: <?php include 'fetch_contact.php'; ?></strong> <span id="contact"></span></p>
         </div>
       </div>
     </div>
@@ -78,9 +76,12 @@
           <p><a href="#" onclick="Edit()">Edit Profile</a></p>
           <p><a href="#" onclick="LendersList()">Lenders List</a></p>
           <p><a href="#" onclick="Application()">Application Status</a></p>
+          <p><a href="#" onclick="Review()">User Review</a></p>
+          <p><a href="#" onclick="FAQ()">FAQs</a></p>
         </nav>
+        <div class="logout" onclick="logout()">Logout</div>
       </div>
-      <div class="logout" onclick="logout()">Logout</div>
+      
     </div>
 
     <script src="borrower.js"></script>

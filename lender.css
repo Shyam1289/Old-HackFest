@@ -45,7 +45,7 @@ nav ul li a {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #333;
+    background-color: #00a976;
     color: #fff;
     transition: left 0.3s ease;
     z-index: 999;
@@ -55,6 +55,7 @@ nav ul li a {
 }
 .dashboard-content {
     padding: 20px;
+    color: white;
 }
 .logout {
     position: fixed;
@@ -85,4 +86,46 @@ nav ul li a {
         margin-right: 0;
         margin-bottom: 10px;
     }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.profile {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+.profile h2 {
+    margin-top: 0;
+    text-align: center;
+}
+.image {
+    margin-bottom: 20px;
+}
+.profile-info {
+    margin-bottom: 20px;
+}
+.profile-info p {
+    margin: 20px 0;
+}
+.button-container {
+    text-align: center;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #45a049;
 }

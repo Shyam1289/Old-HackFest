@@ -14,7 +14,7 @@ signInButton.addEventListener('click', function(){
 })
 login.addEventListener('click',function(){
     if (userType=="Lender") {
-        window.location.href='lender.html';
+        window.location.href='lender.php';
     }
     else{
         window.location.href='borrower.php';

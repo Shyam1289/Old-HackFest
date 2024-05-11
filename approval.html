@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application Status</title>
-    <link rel="stylesheet" href="borrrower.css">
+    <link rel="stylesheet" href="borrrower.css" />
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -62,6 +62,8 @@
           <p><a href="#" onclick="Edit()">Edit Profile</a></p>
           <p><a href="#" onclick="LendersList()">Lenders List</a></p>
           <p><a href="#" onclick="Application()">Application Status</a></p>
+          <p><a href="#" onclick="Review()">User Review</a></p>
+          <p><a href="#" onclick="FAQ()">FAQs</a></p>
         </nav>
       </div>
       <div class="logout" onclick="logout()">Logout</div>
@@ -75,7 +77,63 @@
       // You can customize this logic according to your requirements
 
       // Example logic: random success or error
-      const isSuccessful = Math.random() < 0.5; // 50% chance of being successful
+      const paymentHistory = 100*Math.random();
+      const creditUtilization = 100*Math.random();
+      const creditHistoryLength = 100*Math.random();
+      const creditTypes = 100*Math.random();
+      const recentInquiries = 100*Math.random();
+      function calculateCreditScore(
+        paymentHistory,
+        creditUtilization,
+        creditHistoryLength,
+        creditTypes,
+        recentInquiries
+      ) {
+        // Weightage for each factor (sum of weights should be 1)
+        const weights = {
+          paymentHistory: 0.35,
+          creditUtilization: 0.25,
+          creditHistoryLength: 0.15,
+          creditTypes: 0.15,
+          recentInquiries: 0.1,
+        };
+
+        // Check if all inputs are valid numbers
+        if (
+          typeof paymentHistory !== "number" ||
+          typeof creditUtilization !== "number" ||
+          typeof creditHistoryLength !== "number" ||
+          typeof creditTypes !== "number" ||
+          typeof recentInquiries !== "number"
+        ) {
+          throw new Error("All parameters must be numbers");
+        }
+
+        // Normalize values (assuming each factor is on a scale of 0 to 100)
+        const normalizedPaymentHistory = paymentHistory / 100;
+        const normalizedCreditUtilization = creditUtilization / 100;
+        const normalizedCreditHistoryLength = creditHistoryLength / 100;
+        const normalizedCreditTypes = creditTypes / 100;
+        const normalizedRecentInquiries = recentInquiries / 100;
+
+        // Calculate credit score out of 900
+        const creditScore =
+          (normalizedPaymentHistory * weights.paymentHistory +
+            normalizedCreditUtilization * weights.creditUtilization +
+            normalizedCreditHistoryLength * weights.creditHistoryLength +
+            normalizedCreditTypes * weights.creditTypes +
+            normalizedRecentInquiries * weights.recentInquiries) *
+          900;
+
+        // Round the credit score to nearest integer
+        return Math.round(creditScore);
+      }
+      const total=calculateCreditScore(paymentHistory,
+        creditUtilization,
+        creditHistoryLength,
+        creditTypes,
+        recentInquiries);
+      const isSuccessful = total>500;
 
       // Display message based on success
       if (isSuccessful) {

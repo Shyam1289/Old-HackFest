@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Calculator</title>
+<link rel="stylesheet" href="borrrower.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    input[type="text"], input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#" onclick="toggleDashboard()">Dashboard</a></li>
+            <li><a href="#" onclick="showHomePage()">Home</a></li>
+            <li><a href="#" onclick="contact()">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+<div class="container">
+    <h2>Lender's list</h2>
+    <!-- <form id="loanForm">
+        <label for="name">Name of lender:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Contact:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="amount">Lending Amount:</label>
+        <input type="number" id="amount" name="amount" min="0" required>
+
+        <label for="rate">Annual Interest Rate (% pa):</label>
+        <input type="number" id="rate" name="rate" min="0" required>
+
+        <label for="time">Time (in years):</label>
+        <input type="number" id="time" name="time" min="0" required>
+
+        <button type="submit">Calculate</button>
+    </form> -->
+    <form class="form" method="post" action="save_lender.php">
+      <div class="form-group">
+        <i class="name"></i>
+        <label for="name">Name of lender:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name of lender"
+          required
+        />
+        
+      </div>
+      <div class="form-group">
+        <i class="contact"></i>
+        <label for="contact">Contact Detail</label>
+        <input
+          type="text"
+          name="contact"
+          id="contact"
+          placeholder="Contact Detail"
+          required
+        />
+        
+      </div>
+      <div class="form-group">
+        <i class="amount"></i>
+        <label for="amount">Lending Amount:</label>
+        <input
+          type="text"
+          name="amount"
+          id="amount"
+          placeholder="Lending Amount:"
+          required
+        />
+        
+      </div>
+      <div class="form-group">
+        <i class="interest"></i>
+        <label for="interest">Annual Interest Rate (% pa):</label>
+        <input
+          type="text"
+          name="interest"
+          id="interest"
+          placeholder="Annual Interest Rate (% pa)"
+          required
+        />
+        
+      </div>
+      <div class="form-group">
+        <i class="time"></i>
+        <label for="time">Time (in years):</label>
+        <input
+          type="text"
+          name="time"
+          id="time"
+          placeholder="Time (in years)"
+          required
+        />
+        
+      </div>
+      <input type="submit" class="btn" value="Apply" name="Apply" />
+    </form>
+    <div id="result"></div>
+</div>
+<div class="dashboard-panel" id="dashboard">
+    <div class="dashboard-content">
+      <div class="closeDashboard" onclick="closeDashboard()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          color="white"
+          fill="none"
+        >
+          <path
+            d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <h1>Dashboard</h1>
+      <nav>
+        <p><a href="#" onclick="Edit()">Edit Profile</a></p>
+        <p><a href="#" onclick="lenderCriteria()">Lending Criteria</a></p>
+        <p><a href="#" onclick="Review()">User Review</a></p>
+        <p><a href="#" onclick="FAQ()">FAQs</a></p>
+      </nav>
+    </div>
+
+    <div class="logout" onclick="logout()">Logout</div>
+  </div>
+<!-- <script>
+    document.getElementById('loanForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let amount = parseFloat(document.getElementById('amount').value);
+        let rate = parseFloat(document.getElementById('rate').value);
+        let time = parseFloat(document.getElementById('time').value);
+        
+        let totalAmount = amount * Math.pow(1 + rate / 100, time);
+        let interest = totalAmount - amount;
+        
+        document.getElementById('result').innerHTML = `
+            <h3>Loan Details</h3>
+            <p>Name: ${document.getElementById('name').value}</p>
+            <p>Phone Number: ${document.getElementById('phone').value}</p>
+            <p>Credited Amount: ${amount}</p>
+            <p>Annual Interest Rate: ${rate}%</p>
+            <p>Time: ${time} years</p>
+            <h4>Interest: ${interest.toFixed(2)}</h4>
+            <h4>Total Amount: ${totalAmount.toFixed(2)}</h4>
+        `;
+    });
+</script> -->
+<script src="lender.js"></script>
+</body>
+</html>

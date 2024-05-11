@@ -1,6 +1,6 @@
 
 function showHomePage() {
-    window.location.href = 'lender.html';
+    window.location.href = 'lender.php';
 }
 
 function toggleDashboard() {
@@ -36,5 +36,18 @@ function contact() {
 function Edit() {
     // Perform logout actions, e.g., redirect to logout page
     window.location.href = 'lenderProfile.html';
+
+}
+function Review() {
+    // Perform logout actions, e.g., redirect to logout page
+    window.location.href = 'userReview.html';
+
+}
+
+function lenderCriteria() {
+    window.location.href = 'lenderCriteria.html';
+}
+function FAQ() {
+    window.location.href = 'faq.html';
 
 }

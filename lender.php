@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loan Application Form</title>
-    <link rel="stylesheet" href="application.css" />
+    <title>Dashboard</title>
     <link rel="stylesheet" href="borrrower.css" />
   </head>
   <body>
@@ -22,6 +21,31 @@
         </ul>
       </nav>
     </header>
+    <div class="container" id="homePage">
+      <div class="userType" id="userType">
+        <nav>
+          <a href="borrower.php">Change to Borrower</a>
+        </nav>
+      </div>
+      <div class="profile">
+        <center>
+          <img
+            class="image"
+            src="images/userprofile.png"
+            width="120"
+            height="150"
+          />
+        </center>
+
+        <p><strong>Name: <?php include 'fetch_name.php'; ?></strong> <span id="name"></span></p>
+              <p><strong>Email ID: <?php include 'fetch_email.php'; ?></strong> <span id="email"></span></p>
+              <p>
+                <strong>Address: <?php include 'fetch_address.php'; ?></strong>
+                <span id="address"></span>
+              </p>
+              <p><strong>Contact: <?php include 'fetch_contact.php'; ?></strong> <span id="contact"></span></p>
+      </div>
+    </div>
     <div class="dashboard-panel" id="dashboard">
       <div class="dashboard-content">
         <div class="closeDashboard" onclick="closeDashboard()">
@@ -45,42 +69,16 @@
         <h1>Dashboard</h1>
         <nav>
           <p><a href="#" onclick="Edit()">Edit Profile</a></p>
-          <p><a href="#" onclick="LendersList()">Lenders List</a></p>
-          <p><a href="#" onclick="Application()">Application Status</a></p>
+          <p><a href="#" onclick="lenderCriteria()">Lending Criteria</a></p>
           <p><a href="#" onclick="Review()">User Review</a></p>
           <p><a href="#" onclick="FAQ()">FAQs</a></p>
         </nav>
       </div>
+
       <div class="logout" onclick="logout()">Logout</div>
     </div>
-    <div class="container">
-      <h1>Loan Application Form</h1>
-      <form id="loanForm">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="amount">Money to be borrowed (₹):</label>
-          <input type="number" id="amount" name="amount" min="1" required />
-        </div>
-        <div class="form-group">
-          <label for="collateralName">Collateral:</label>
-          <input type="text" id="collateralName" name="collateralName" required />
-        </div>
-        <div class="form-group">
-          <label for="collateralValue">Market Value of Collateral (₹):</label>
-          <input type="number" id="collateralValue" name="collateralValue" min="100" required />
-        </div>
-        <div class="form-group">
-          <label for="idd">ID of lender:</label>
-          <input type="text" id="idd" name="idd" required />
-        </div>
 
-        <button type="submit"><a href="approval.html">Submit</a></button>
-      </form>
-    </div>
-    <script src="application.js"></script>
-    <script src="borrower.js"></script>
+    <script src="lender.js"></script>
+    <script src="profile.js"></script>
   </body>
 </html>
