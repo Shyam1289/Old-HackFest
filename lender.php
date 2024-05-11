@@ -1,4 +1,3 @@
-shreyas patel
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,6 +70,7 @@ shreyas patel
         <nav>
           <p><a href="#" onclick="Edit()">Edit Profile</a></p>
           <p><a href="#" onclick="lenderCriteria()">Lending Criteria</a></p>
+          <p><a href="localhost:3000">Payment</a></p>
           <p><a href="#" onclick="Review()">User Review</a></p>
           <p><a href="#" onclick="FAQ()">FAQs</a></p>
         </nav>
