@@ -26,8 +26,8 @@ function generate_agreement(borrower,collateral,collateral_amount,loan_amount,le
    </div>
 </div>`
 }
-let collateral_amount="Rs. 100000";
-let borrower="Shresth Gupta";
-let collateral="Shresth ki CG";
-let loan_amount="bandi";
+let collateral_amount="Rs. 50000";
+let borrower="Ram Krishna";
+let collateral="House";
+let loan_amount="1000";
 generate_agreement(borrower,collateral,collateral_amount,loan_amount);
