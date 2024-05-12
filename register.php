@@ -43,7 +43,7 @@ if(isset($_POST['signIn'])){
     exit();
    }
    else{
-    echo "Not Found, Incorrect Email or Password";
+    header("Location: index.php");
    }
 
 }
