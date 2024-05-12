@@ -71,7 +71,7 @@
     <h1>Application Status</h1>
 
     <div id="result"></div>
-
+    <a href="collateral.html">Show Agreement </a>
     <script>
       // JavaScript to determine if the application is successful or not
       // You can customize this logic according to your requirements
@@ -139,9 +139,11 @@
       if (isSuccessful) {
         document.getElementById("result").innerHTML =
           "<p class='success'>Congratulations! Your application was successful.</p>";
+          
       } else {
         document.getElementById("result").innerHTML =
           "<p class='error'>We're sorry, your application was not successful.</p>";
+
       }
     </script>
     <script src="borrower.js"></script>
